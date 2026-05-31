@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        Analizador de Flujo de Control
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>
+        Analizador de Flujo de Control
+    </h1>
+
+    <h2>
+        Cierre de Caja de Supermercado
+    </h2>
+
+    <form method="POST">
+
+        <textarea
+            name="proceso"
+            rows="12"
+            cols="70"
+            placeholder="Ingrese los procesos aquí..."></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Analizar
+        </button>
+
+    </form>
+
+    <hr>
+
+    <h2>Tokens Encontrados</h2>
+
+    {% for token in tokens %}
+        <p>{{ token }}</p>
+    {% endfor %}
+
+    <hr>
+
+    <h2>Resultado Sintáctico</h2>
+
+    <p>{{ resultado_sintaxis }}</p>
+
+    <hr>
+
+    <h2>Recorrido del AFD</h2>
+
+    {% for paso in recorrido_afd %}
+        <p>{{ paso }}</p>
+    {% endfor %}
+
+    <hr>
+
+    <h2>Resultado del AFD</h2>
+
+    <h3>{{ resultado_afd }}</h3>
+
+</body>
+
+</html>
