@@ -3,12 +3,13 @@ def analizar_lexico(texto):
     tokens = []
 
     diccionario = {
-        "ABRIR_CAJA": "TK_ABRIR",
-        "VENTA": "TK_VENTA",
-        "GASTO": "TK_GASTO",
-        "CONTAR": "TK_CONTAR",
-        "VALIDAR": "TK_VALIDAR",
-        "CERRAR": "TK_CERRAR"
+        "INICIAR_TURNO": "TK_INICIAR",
+        "REGISTRAR_VENTA": "TK_VENTA",
+        "REGISTRAR_GASTO": "TK_GASTO",
+        "CONTAR_EFECTIVO": "TK_CONTAR",
+        "VALIDAR_CUADRE": "TK_VALIDAR",
+        "GENERAR_REPORTE": "TK_REPORTE",
+        "CERRAR_CAJA": "TK_CERRAR"
     }
 
     lineas = texto.splitlines()

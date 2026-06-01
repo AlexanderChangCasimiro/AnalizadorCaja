@@ -6,7 +6,7 @@ def ejecutar_afd(tokens):
 
     transiciones = {
 
-        ("q0", "TK_ABRIR"): "q1",
+        ("q0", "TK_INICIAR"): "q1",
 
         ("q1", "TK_VENTA"): "q2",
         ("q1", "TK_GASTO"): "q2",
@@ -18,7 +18,9 @@ def ejecutar_afd(tokens):
 
         ("q3", "TK_VALIDAR"): "q4",
 
-        ("q4", "TK_CERRAR"): "q5"
+        ("q4", "TK_REPORTE"): "q5",
+
+        ("q5", "TK_CERRAR"): "q6"
     }
 
     for token in tokens:
@@ -44,7 +46,7 @@ def ejecutar_afd(tokens):
 
         estado = nuevo_estado
 
-    if estado == "q5":
+    if estado == "q6":
         return recorrido, "ACEPTADO"
 
     return recorrido, "RECHAZADO"

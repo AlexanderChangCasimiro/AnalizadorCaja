@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
     <title>
@@ -10,6 +11,7 @@
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
@@ -65,6 +67,14 @@
     <h2>Resultado del AFD</h2>
 
     <h3>{{ resultado_afd }}</h3>
+
+    <hr>
+
+    <h2>Resumen del Cierre</h2>
+
+    <p>Ventas registradas: {{ resumen.ventas }}</p>
+
+    <p>Gastos registrados: {{ resumen.gastos }}</p>
 
 </body>
 
